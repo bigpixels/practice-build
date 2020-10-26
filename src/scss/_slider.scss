@@ -1,0 +1,151 @@
+/* Стрелки */
+.banner__slider .slick-arrow {
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    font-size: 0;
+    background: none;
+    transition-duration: 0.2s;
+    &::after {
+        @include content-block-absolute;
+        padding: 36px 25px;
+        border: 1px solid $color-main;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+.banner__slider .slick-arrow.slick-prev {
+    left: 5%;
+    &::before {
+        @include slider-arrow_left;
+    }
+}
+.banner__slider .slick-arrow.slick-next {
+    right: 10%;
+    &::before {
+        @include slider-arrow_right;
+    }
+}
+
+.gallery__slider .slick-arrow {
+    position: absolute;
+    bottom: 55%;
+    z-index: 1;
+    font-size: 0;
+    background: none;
+    border-color: $color-secondary;
+    transition-duration: 0.2s;
+}
+
+.gallery__slider .slick-arrow.slick-prev {
+    left: -11%;
+    &::before {
+        @include slider-arrow_left;
+        // border-color: $color-secondary;
+    }
+}
+.gallery__slider .slick-arrow.slick-next {
+    right: 0;
+    &::before {
+        @include slider-arrow_right;
+        // border-color: $color-secondary;
+    }
+}
+
+.gallery__popup button.mfp-close {
+    right: -10px;
+    top: -10px;
+}
+
+.slick-slide:focus {
+    outline: none;
+}
+
+/* Слайдер с точками */ 
+.slick-slider.slick-dotted {
+    position: relative;
+}
+
+/* Ограничивающая оболочка */ 
+.slick-list {
+    overflow: hidden;
+} 
+/* Лента слайдов */ 
+.slick-track{
+    @include classic-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* Точки (булиты) */ 
+.banner__slider .slick-dots {
+    @include classic-flex;
+    justify-content: center;
+    position: relative;
+    top: -240px;
+} 
+
+/* Активная точка */
+.slick-dots li.slick-active {
+    @include animation-pulse;
+} 
+.slick-dots li.slick-active button{
+
+}
+
+/* Элемент точки */ 
+.banner__slider .slick-dots li button{
+    background-color: $color-success;
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+
+
+/* 
+
+====== Zoom effect ======
+
+*/
+
+.mfp-zoom-in {
+  
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out; 
+    transform: scale(0.8); 
+  }
+  
+  &.mfp-bg {
+    opacity: 0;
+	  transition: all 0.3s ease-out;
+  }
+  
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1); 
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+  
+  /* animate out */
+  &.mfp-removing {
+    
+    .mfp-with-anim {
+      transform: scale(0.8); 
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+    
+  } 
+}

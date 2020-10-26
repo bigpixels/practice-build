@@ -1,0 +1,195 @@
+@import 'responsive-txt';
+
+.area-header-footer {
+	@include classic-flex;
+	align-items: center;
+}
+
+.button {
+	display: block;
+	height: auto;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+	&__primary {
+		margin: 0 auto;
+		padding: 10px 0;
+		color: $color-secondary;
+		max-width: 142px;
+		letter-spacing: 0.1em;
+		&::before {
+			@include line_over;
+		}
+		&::after {
+			@include line_under;
+		}
+	}
+	&__secondary {
+		background: none;
+		padding: 21px 60px;
+		color: $color-success;
+		border: 1px solid $color-success;
+	}
+}
+
+.field {
+	position: relative;
+	&__primary {
+		margin-left: auto;
+	}
+	&_bg-success {
+		background-color: $color-success;
+	}
+}
+
+.form {
+	@include classic-flex;
+	position: relative;
+	margin-left: 18%;
+	&__input-field {
+		flex-basis: 50%;
+	}
+	&__input {
+		width: 93%;
+		border: 1px solid $color-border;
+		padding-left: 22px;
+		&:not(:last-child) {
+			margin-bottom: 21px;
+		}
+	}
+	&__text-area {
+		flex-basis: 48%;
+		border: 1px solid $color-border;
+		position: relative;
+		left: 6%;
+		z-index: 2;
+	}
+}
+
+.overlay {
+	display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+	background: rgba($color: #000000, $alpha: 0.5);
+    z-index: 10;
+}
+
+// .no-scroll {
+// 	overflow: hidden !important;
+// }
+
+.title {
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	&_Geometria-Bold {
+		font-family: 'Geometria-Bold';
+	}
+	&_Geometria-Medium {
+		font-family: 'Geometria-Medium';
+	}
+	&_IBMPlexSans-Medium {
+		font-family: 'IBMPlexSans-Medium';
+	}
+	&_IBMPlexSans-Bold {
+		font-family: 'IBMPlexSans-Bold';
+	}
+	&_fsz-12 {
+		font-size: 12px;
+	}
+	&_fsz-14 {
+		font-size: 14px;
+	}
+	&_fsz-16 {
+		@include fluidFontSize (14px, 16px, 320px, 599px, 16px);
+	}
+	&_fsz-18 {
+		@include fluidFontSize (16px, 18px, 768px, 1920px, 18px);
+	}
+	&_fsz-24 {
+		@include fluidFontSize (18px, 24px, 768px, 1920px, 24px);
+	}
+	&_fsz-36 {
+		@include fluidFontSize (20px, 36px, 768px, 1920px, 36px);
+	}
+	&_fsz-46 {
+		@include fluidFontSize (24px, 46px, 768px, 1920px, 46px);
+	}
+	&_fsz-48 {
+		@include fluidFontSize (26px, 48px, 768px, 1920px, 48px);
+	}
+	&_fsz-64 {
+		@include fluidFontSize (28px, 64px, 768px, 1920px, 64px);
+	}
+	&_lh-24 {
+		line-height: 24px;
+	}
+	&_lh-35 {
+		line-height: 35px;
+	}
+	&_lh-45 {
+		line-height: 45px;
+	}
+	&_lh-60 {
+		line-height: 60px;
+	}
+	&_lh-81 {
+		line-height: 127%;
+	}
+	&_ls-01em {
+		letter-spacing: 0.1em;
+	}
+	&_color-main {
+		color: $color-main;
+	}
+	&_color-title {
+		color: $color-title;
+	}
+	&_color-subtitle {
+		color: $color-subtitle;
+	}
+	&_color-success {
+		color: $color-success;
+	}
+	&_color-paragraph {
+		color: $color-paragraph;
+	}
+	&_color-secondary {
+		color: $color-secondary;
+	}
+}
+
+.margin {
+	/*mt*/
+	&_mt-28 {
+		margin-top: 28px;
+	}
+	&_mt-36 {
+		margin-top: 36px;
+	}
+	&_mt-60 {
+		margin-top: 60px;
+	}
+	&_mt-70 {
+		margin-top: 70px;
+	}
+	/*end mt*/
+
+	/*mb*/
+	&_mb-13 {
+		margin-bottom: 13px;
+	}
+	&_mb-44 {
+		margin-bottom: 44px;
+	}
+	&_mb-35 {
+		margin-bottom: 35px;
+	}
+	&_mb-55 {
+		margin-bottom: 55px;
+	}
+	/*end mb*/
+}
