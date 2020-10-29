@@ -2,7 +2,7 @@
 $(function () {
 
     /*инициализируем анимацию WOW JS*/
-        if (screen.width>991) {
+        if (screen.width>0) {
             new WOW().init();
         }
     /*end*/
@@ -25,8 +25,8 @@ $(function () {
             .addClass('hamburger-field__list-link');
         }
         
-        // function  window_size() {
-            // if ( body.innerWidth() < 1399) {
+        function  window_size() {
+            if ( body.innerWidth() < 1399) {
                 nav_link_move(4);
             }
             if ( body.innerWidth() < 1240) {
@@ -42,8 +42,8 @@ $(function () {
             if ( body.innerWidth() < 499) {
                 phone_number_move();
             }
-        // }
-        // $(window).on('load resize', window_size)
+        }
+        $(window).on('load resize', window_size)
     /*end адаптивим .header__navigation-link*/
 
     /*показать скрытый блок под гамбургером*/
