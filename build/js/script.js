@@ -7,6 +7,45 @@ $(function () {
         }
     /*end*/
 
+    /*адаптивим .header__navigation-link*/
+        let body = $('body');
+        let nav_link = $('.header__navigation-link');
+        let phone_number = $('.header .phone-number');
+        
+        function phone_number_move () {
+            return phone_number
+            .appendTo('.hamburger-field__list')
+            .addClass('hamburger-field__list-link')
+        }
+
+        function nav_link_move (size_counter) {
+            nav_link.eq(size_counter)
+            .removeClass()
+            .appendTo('.hamburger-field__list')
+            .addClass('hamburger-field__list-link');
+        }
+        
+        function  window_size() {
+            if ( body.innerWidth() < 1399) {
+                nav_link_move(4);
+            }
+            if ( body.innerWidth() < 1240) {
+                nav_link_move(3);
+            }
+            if ( body.innerWidth() < 1040) {
+                nav_link_move(2);
+            }
+            if ( body.innerWidth() < 810) {
+                nav_link_move(1);
+                nav_link_move(0);
+            }
+            if ( body.innerWidth() < 499) {
+                phone_number_move();
+            }
+        }
+        $(window).on('load resize', window_size)
+    /*end адаптивим .header__navigation-link*/
+
     /*показать скрытый блок под гамбургером*/
         let $hamburger = $('.hamburger');
         let $overlay = $('.overlay');
@@ -41,45 +80,6 @@ $(function () {
             });
         })();
     /*end показать скрытый блок под гамбургером*/
-
-    /*адаптивим .header__navigation-link*/
-        let body = $('body');
-        let nav_link = $('.header__navigation-link');
-        let phone_number = $('.header .phone-number');
-        
-        function phone_number_move () {
-            return phone_number
-            .appendTo('.hamburger-field__list')
-            .addClass('hamburger-field__list-link')
-        }
-
-        function nav_link_move (size_counter) {
-            nav_link.eq(size_counter)
-            .removeClass()
-            .appendTo('.hamburger-field__list')
-            .addClass('hamburger-field__list-link');
-        }
-        
-        function window_size() {
-            if ( body.innerWidth() < 1399) {
-                nav_link_move(4);
-            }
-            if ( body.innerWidth() < 1240) {
-                nav_link_move(3);
-            }
-            if ( body.innerWidth() < 1040) {
-                nav_link_move(2);
-            }
-            if ( body.innerWidth() < 810) {
-                nav_link_move(1);
-                nav_link_move(0);
-            }
-            if ( body.innerWidth() < 499) {
-                phone_number_move();
-            }
-        }
-        $(window).on('load resize', window_size);
-    /*end адаптивим .header__navigation-link*/
 
     /*клонируем карточки .category__card*/
         let category_card = $('.category__card');
