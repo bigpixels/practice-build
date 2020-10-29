@@ -2,7 +2,7 @@
 $(function () {
 
     /*инициализируем анимацию WOW JS*/
-        if (screen.width>991) {
+        if (screen.width>1280) {
             new WOW().init();
         }
     /*end*/
