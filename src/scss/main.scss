@@ -89,6 +89,10 @@ button {
 			height: auto;
 		}
 	}
+
+	.header-el-active {
+		transform: translateX(0);
+	}
 //end header
 
 //main
@@ -675,11 +679,6 @@ button {
 	}
 
 	@media screen and (max-width: 499px) {
-		.header__navigation-link {
-			&::nth-child() {
-				
-			}
-		}
 		.hamburger-field {
 			margin-left: auto;
 		}
@@ -701,9 +700,6 @@ button {
 			transition-duration: 0.4s;
 			transform: translateX(100%);
 			transition-duration: 0.5s;
-		}
-		.hamburger-field__list.active {
-			transform: translateX(0);
 		}
 	}
 //end @media

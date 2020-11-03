@@ -8,39 +8,63 @@ $(function () {
     /*end*/
 
     /*адаптивим .header__navigation-link*/
-        let body = $('body');
-        let nav_link = $('.header__navigation-link');
-        let phone_number = $('.header .phone-number');
+        let $body = $('body');
+        let $nav_link = $('.header__navigation-link');
+        let $phone_number = $('.header .phone-number');
         
         function phone_number_move () {
-            return phone_number
+            return $phone_number
             .appendTo('.hamburger-field__list')
             .addClass('hamburger-field__list-link')
         }
+        function phone_number_unMove () {
+            return $phone_number
+            .removeClass()
+            .appendTo('.header__inner')
+            .addClass('phone-number title_fsz-18 title_IBMPlexSans-Bold')
+        }
 
         function nav_link_move (size_counter) {
-            nav_link.eq(size_counter)
+            $nav_link.eq(size_counter)
             .removeClass()
             .appendTo('.hamburger-field__list')
-            .addClass('hamburger-field__list-link');
+            .addClass('hamburger-field__list-link header-active');
+        }
+
+        function nav_link_unMove (size_counter) {
+            $nav_link.eq(size_counter)
+            .removeClass()
+            .appendTo('.header__navigation-list')
+            .addClass('header__navigation-link title_color-secondary wow fadeInDown');
         }
         
         function  window_size() {
-            if ( body.innerWidth() < 1399) {
+            if ( $body.innerWidth() < 1399) {
                 nav_link_move(4);
+            } else {
+                nav_link_unMove(4);
             }
-            if ( body.innerWidth() < 1240) {
+            if ( $body.innerWidth() < 1240) {
                 nav_link_move(3);
+            } else {
+                nav_link_unMove(3);
             }
-            if ( body.innerWidth() < 1040) {
+            if ( $body.innerWidth() < 1040) {
                 nav_link_move(2);
+            } else {
+                nav_link_unMove(2);
             }
-            if ( body.innerWidth() < 810) {
+            if ( $body.innerWidth() < 810) {
                 nav_link_move(1);
                 nav_link_move(0);
+            } else {
+                nav_link_unMove(1);
+                nav_link_unMove(0);
             }
-            if ( body.innerWidth() < 499) {
+            if ( $body.innerWidth() < 499) {
                 phone_number_move();
+            } else {
+                phone_number_unMove();
             }
         }
         $(window).on('load resize', window_size)
@@ -58,7 +82,7 @@ $(function () {
             .next()
             .toggleClass('active');
 
-            if ( body.innerWidth() < 499) {
+            if ( $body.innerWidth() < 499) {
                 $overlay.fadeToggle();
                 // $('body, html').toggleClass('no-scroll');
             }

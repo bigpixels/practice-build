@@ -690,6 +690,9 @@ button {
     width: 100%;
     height: auto; }
 
+.header-el-active {
+  transform: translateX(0); }
+
 .banner__slider {
   position: relative;
   top: 106px; }
@@ -1274,8 +1277,6 @@ button {
     text-align: center;
     transition-duration: 0.4s;
     transform: translateX(100%);
-    transition-duration: 0.5s; }
-  .hamburger-field__list.active {
-    transform: translateX(0); } }
+    transition-duration: 0.5s; } }
 
 /*# sourceMappingURL=main.css.map */
