@@ -15,8 +15,9 @@ $(function () {
         
         function phone_number_move () {
             return $phone_number
+            .removeClass()
             .appendTo('.hamburger-field__list')
-            .addClass('hamburger-field__list-link')
+            .addClass('hamburger-field__list-link hamburger-phone')
         }
         function phone_number_unMove () {
             return $phone_number
