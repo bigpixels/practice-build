@@ -452,13 +452,6 @@ button {
 		}
 	}
 
-	@media screen and (max-width: 1399px) {
-		// .header__navigation-link:nth-child(5) {
-		// 	position: absolute;
-		// 	transform: translateX(1000%);
-		// }
-	}
-
 	@media screen and (max-width: 1279px) {
 		.about-company {
 			padding: 60px 0;
@@ -498,20 +491,6 @@ button {
 		.gallery .title_fsz-46 {
 			margin-bottom: 25px;
 		}
-	}
-
-	@media screen and (max-width: 1240px) {
-		// .header__navigation-link:nth-child(4) {
-		// 	position: absolute;
-		// 	transform: translateX(1000%);
-		// }
-	}
-	
-	@media screen and (max-width: 1040px) {
-		// .header__navigation-link:nth-child(3) {
-		// 	position: absolute;
-		// 	transform: translateX(1000%);
-		// }
 	}
 
 	@media screen and (max-width: 991px) {
@@ -566,10 +545,6 @@ button {
 	}
 	
 	@media screen and (max-width: 810px) {
-		// .header__navigation-link {
-		// 	position: absolute;
-		// 	transform: translateX(1000%);
-		// }
 		.hamburger-field__list-link {
 			&:nth-child(6), &:nth-child(7){
 				&:hover {
@@ -700,10 +675,6 @@ button {
 	}
 
 	@media screen and (max-width: 499px) {
-		// .header .phone-number {
-		// 	position: absolute;
-		// 	transform: translateX(1000%);
-		// }
 		.hamburger-phone {
 			position: relative;
 			transform: translateX(0);
