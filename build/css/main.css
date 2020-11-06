@@ -1090,11 +1090,6 @@ button {
     padding: 83px 0 55px 0;
     max-width: 773px; } }
 
-@media screen and (max-width: 1399px) {
-  .header__navigation-link:nth-child(5) {
-    position: absolute;
-    transform: translateX(1000%); } }
-
 @media screen and (max-width: 1279px) {
   .about-company {
     padding: 60px 0; }
@@ -1123,16 +1118,6 @@ button {
         border: none; }
   .gallery .title_fsz-46 {
     margin-bottom: 25px; } }
-
-@media screen and (max-width: 1240px) {
-  .header__navigation-link:nth-child(4) {
-    position: absolute;
-    transform: translateX(1000%); } }
-
-@media screen and (max-width: 1040px) {
-  .header__navigation-link:nth-child(3) {
-    position: absolute;
-    transform: translateX(1000%); } }
 
 @media screen and (max-width: 991px) {
   .category__card {
@@ -1169,9 +1154,6 @@ button {
     background: none; } }
 
 @media screen and (max-width: 810px) {
-  .header__navigation-link {
-    position: absolute;
-    transform: translateX(1000%); }
   .hamburger-field__list-link:nth-child(6):hover, .hamburger-field__list-link:nth-child(7):hover {
     background: linear-gradient(0deg, rgba(30, 138, 94, 0.05) 0%, rgba(30, 138, 94, 0) 100%); }
     .hamburger-field__list-link:nth-child(6):hover::after, .hamburger-field__list-link:nth-child(7):hover::after {
@@ -1275,9 +1257,6 @@ button {
     padding: 40px 0; } }
 
 @media screen and (max-width: 499px) {
-  .header .phone-number {
-    position: absolute;
-    transform: translateX(1000%); }
   .hamburger-phone {
     position: relative;
     transform: translateX(0);
