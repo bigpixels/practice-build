@@ -1,6 +1,6 @@
 'use strict';
 $(document).ready(function(){
-    
+
 /*инициализируем анимацию WOW JS*/
     if (screen.width> 0 ) {
         new WOW().init();
@@ -8,14 +8,12 @@ $(document).ready(function(){
 /*end*/
 
 /*адаптивим .header__navigation-link*/
-    let $body = $('body');
+    let $body = $("body");
     let $nav_link = $('.header__navigation-link');
     let $phone_number = $('.header .phone-number');
-    // let $hamburger_link = $('.hamburger-field__list-link');
     
     function phone_number_move () {
         return $phone_number
-        // .removeClass()
         .appendTo('.hamburger-field__list')
         .addClass('hamburger-field__list-link')
     }
@@ -39,36 +37,37 @@ $(document).ready(function(){
         .addClass('header__navigation-link title_color-secondary wow fadeInDown');
     }
     
-    function  window_size() {
-        if ( $body.innerWidth() < 810) {
+    function window_size() {
+        if ( $body.width() < 810) {
             nav_link_move(1);
             nav_link_move(0);
         } else {
             nav_link_unMove(0);
             nav_link_unMove(1);
+
         }
-        if ( $body.innerWidth() < 1040) {
+        if ( $body.width() < 1040) {
             nav_link_move(2);
         } else {
             nav_link_unMove(2);
         }
-        if ( $body.innerWidth() < 1240) {
+        if ( $body.width() < 1240) {
             nav_link_move(3);
         } else {
             nav_link_unMove(3);
         }
-        if ( $body.innerWidth() < 1399) {
+        if ( $body.width() < 1399) {
             nav_link_move(4);
         } else {
             nav_link_unMove(4);
         }
-        if ( $body.innerWidth() < 499) {
+        if ( $body.width() < 499) {
             phone_number_move();
         } else {
             phone_number_unMove();
         }
     }
-    $(window).on('load resize', window_size)
+    $(window).on('load resize', window_size);
 /*end адаптивим .header__navigation-link*/
 
 /*показать скрытый блок под гамбургером*/

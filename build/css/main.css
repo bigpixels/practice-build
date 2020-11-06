@@ -1257,7 +1257,7 @@ button {
     padding: 40px 0; } }
 
 @media screen and (max-width: 499px) {
-  .phone-number {
+  .header .phone-number {
     border-top: 1px solid #E6E6E6; }
   .hamburger-phone {
     position: relative;
