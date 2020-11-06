@@ -690,9 +690,6 @@ button {
     width: 100%;
     height: auto; }
 
-.header-el-active {
-  transform: translateX(0); }
-
 .banner__slider {
   position: relative;
   top: 106px; }
@@ -989,7 +986,7 @@ button {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: center; }
 
 .gallery__img-field {
   display: block;
@@ -1093,6 +1090,10 @@ button {
     padding: 83px 0 55px 0;
     max-width: 773px; } }
 
+@media screen and (max-width: 1399px) {
+  .header__navigation-link:nth-child(5) {
+    display: none; } }
+
 @media screen and (max-width: 1279px) {
   .about-company {
     padding: 60px 0; }
@@ -1121,6 +1122,14 @@ button {
         border: none; }
   .gallery .title_fsz-46 {
     margin-bottom: 25px; } }
+
+@media screen and (max-width: 1240px) {
+  .header__navigation-link:nth-child(4) {
+    display: none; } }
+
+@media screen and (max-width: 1040px) {
+  .header__navigation-link:nth-child(3) {
+    display: none; } }
 
 @media screen and (max-width: 991px) {
   .category__card {
@@ -1157,9 +1166,11 @@ button {
     background: none; } }
 
 @media screen and (max-width: 810px) {
-  .hamburger-field__list-link:nth-child(9):hover, .hamburger-field__list-link:nth-child(10):hover {
+  .header__navigation-link {
+    display: none; }
+  .hamburger-field__list-link:nth-child(6):hover, .hamburger-field__list-link:nth-child(7):hover {
     background: linear-gradient(0deg, rgba(30, 138, 94, 0.05) 0%, rgba(30, 138, 94, 0) 100%); }
-    .hamburger-field__list-link:nth-child(9):hover::after, .hamburger-field__list-link:nth-child(10):hover::after {
+    .hamburger-field__list-link:nth-child(6):hover::after, .hamburger-field__list-link:nth-child(7):hover::after {
       content: '';
       display: block;
       position: absolute;
@@ -1168,7 +1179,7 @@ button {
       left: 0;
       background-color: #1E8A5E;
       bottom: 0; }
-  .hamburger-field__list-link:nth-child(9)::before, .hamburger-field__list-link:nth-child(10)::before {
+  .hamburger-field__list-link:nth-child(6)::before, .hamburger-field__list-link:nth-child(7)::before {
     content: '';
     display: block;
     position: absolute;
@@ -1182,7 +1193,7 @@ button {
   .gallery__images {
     padding: 25px 0; }
   .gallery__img-field {
-    flex-basis: 48%; }
+    flex-basis: 47%; }
   .gallery__img-field {
     text-align: center; } }
 
@@ -1260,6 +1271,8 @@ button {
     padding: 40px 0; } }
 
 @media screen and (max-width: 499px) {
+  .header .phone-number {
+    display: none; }
   .hamburger-field {
     margin-left: auto; }
   .hamburger-field__close {

@@ -11,6 +11,7 @@ $(function () {
         let $body = $('body');
         let $nav_link = $('.header__navigation-link');
         let $phone_number = $('.header .phone-number');
+        let $hamburger_link = $('.hamburger-field__list-link');
         
         function phone_number_move () {
             return $phone_number
@@ -28,9 +29,8 @@ $(function () {
             $nav_link.eq(size_counter)
             .removeClass()
             .appendTo('.hamburger-field__list')
-            .addClass('hamburger-field__list-link header-active');
+            .addClass('hamburger-field__list-link title_color-secondary moved');
         }
-
         function nav_link_unMove (size_counter) {
             $nav_link.eq(size_counter)
             .removeClass()
@@ -39,27 +39,27 @@ $(function () {
         }
         
         function  window_size() {
-            if ( $body.innerWidth() < 1399) {
-                nav_link_move(4);
+            if ( $body.innerWidth() < 810) {
+                nav_link_move(1);
+                nav_link_move(0);
             } else {
-                nav_link_unMove(4);
-            }
-            if ( $body.innerWidth() < 1240) {
-                nav_link_move(3);
-            } else {
-                nav_link_unMove(3);
+                nav_link_unMove(0);
+                nav_link_unMove(1);
             }
             if ( $body.innerWidth() < 1040) {
                 nav_link_move(2);
             } else {
                 nav_link_unMove(2);
             }
-            if ( $body.innerWidth() < 810) {
-                nav_link_move(1);
-                nav_link_move(0);
+            if ( $body.innerWidth() < 1240) {
+                nav_link_move(3);
             } else {
-                nav_link_unMove(1);
-                nav_link_unMove(0);
+                nav_link_unMove(3);
+            }
+            if ( $body.innerWidth() < 1399) {
+                nav_link_move(4);
+            } else {
+                nav_link_unMove(4);
             }
             if ( $body.innerWidth() < 499) {
                 phone_number_move();
@@ -74,14 +74,12 @@ $(function () {
         let $hamburger = $('.hamburger');
         let $overlay = $('.overlay');
         let $close_but = $('.hamburger-field__close-but');
-        let $hamburger_field_list = $('.hamburger-field__list');
 
         function toggleMobileMenu() {
             $hamburger
             .toggleClass('is-active')
             .next()
             .toggleClass('active');
-
             if ( $body.innerWidth() < 499) {
                 $overlay.fadeToggle();
                 // $('body, html').toggleClass('no-scroll');
@@ -91,7 +89,6 @@ $(function () {
         (function showMobileMenu() {
             $hamburger.on('click', function() {
                 toggleMobileMenu();
-                $hamburger_field_list.addClass('wow fadeInUp');
             });
         })();
 

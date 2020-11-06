@@ -89,10 +89,6 @@ button {
 			height: auto;
 		}
 	}
-
-	.header-el-active {
-		transform: translateX(0);
-	}
 //end header
 
 //main
@@ -351,7 +347,7 @@ button {
 		&__images {
 			padding: 59px 0 43px 0;
 			@include classic-flex;
-			justify-content: space-around;
+			justify-content: center;
 		}
 		&__img-field {
 			display: block;
@@ -456,6 +452,12 @@ button {
 		}
 	}
 
+	@media screen and (max-width: 1399px) {
+		.header__navigation-link:nth-child(5) {
+			display: none;
+		}
+	}
+
 	@media screen and (max-width: 1279px) {
 		.about-company {
 			padding: 60px 0;
@@ -494,6 +496,18 @@ button {
 		}
 		.gallery .title_fsz-46 {
 			margin-bottom: 25px;
+		}
+	}
+
+	@media screen and (max-width: 1240px) {
+		.header__navigation-link:nth-child(4) {
+			display: none;
+		}
+	}
+	
+	@media screen and (max-width: 1040px) {
+		.header__navigation-link:nth-child(3) {
+			display: none;
 		}
 	}
 
@@ -549,8 +563,11 @@ button {
 	}
 	
 	@media screen and (max-width: 810px) {
+		.header__navigation-link {
+			display: none;
+		}
 		.hamburger-field__list-link {
-			&:nth-child(9), &:nth-child(10){
+			&:nth-child(6), &:nth-child(7){
 				&:hover {
 					background: linear-gradient(0deg, rgba(30, 138, 94, 0.05) 0%, rgba(30, 138, 94, 0) 100%);
 					&::after {
@@ -566,7 +583,7 @@ button {
 			padding: 25px 0;
 		}
 		.gallery__img-field {
-			flex-basis: 48%;
+			flex-basis: 47%;
 		}
 		.gallery__img-field {
 			text-align: center;
@@ -679,6 +696,9 @@ button {
 	}
 
 	@media screen and (max-width: 499px) {
+		.header .phone-number {
+			display: none;
+		}
 		.hamburger-field {
 			margin-left: auto;
 		}
