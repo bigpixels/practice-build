@@ -675,6 +675,9 @@ button {
 	}
 
 	@media screen and (max-width: 499px) {
+		.phone-number {
+			border-top: 1px solid $color-border;
+		}
 		.hamburger-phone {
 			position: relative;
 			transform: translateX(0);
