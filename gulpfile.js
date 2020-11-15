@@ -4,7 +4,9 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const notify = require("gulp-notify");
+const autoprefixer = require('gulp-autoprefixer');
 const watch = require('gulp-watch');
+
 
 gulp.task('serve', function() {
     browserSync.init({
@@ -21,6 +23,10 @@ gulp.task('sass-compile', function(){
     return gulp.src('./src/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+        overrideBrowserslist: ['last 3 versions'],
+        cascade: false
+    }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./build/css/'))
     .on("error", notify.onError({
@@ -34,8 +40,8 @@ gulp.task('sass-compile', function(){
 
 gulp.task('watch', function(){
     gulp.watch('./src/scss/**/*.scss', gulp.series('sass-compile'));
-})
+});
 
 gulp.task('default', gulp.series(
-    gulp.parallel('watch', 'sass-compile', 'serve',)
+    gulp.parallel('watch', 'sass-compile', 'serve')
 ))

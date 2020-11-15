@@ -11,6 +11,7 @@
     "browser-sync": "^2.26.12",
     "browsersync": "0.0.1-security",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-notify": "^3.2.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
@@ -18,5 +19,13 @@
     "watch": "^1.0.2"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigpixels/practice-build.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bigpixels/practice-build/issues"
+  },
+  "homepage": "https://github.com/bigpixels/practice-build#readme",
   "description": ""
 }
